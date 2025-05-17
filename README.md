@@ -1,74 +1,90 @@
-# CPU/GPU Memory & Near-Data Processing Homework
+# CPU/GPU Memory & Near-Data Processing Assignments
 
-This repository contains assignments from a hardware systems class focusing on CPU/GPU memory architecture, cache design, DRAM simulation, GPU programming, and near-data processing (PIM). Each assignment applies industry-standard tools to analyze, simulate, and optimize real-world memory and processing behavior.
+This repository contains my assignments from a hardware systems class focusing on CPU/GPU memory architecture, cache design, DRAM simulation, GPU programming, and near-data processing (PIM). Each assignment applies industry-standard tools to analyze, simulate, and optimize real-world memory and processing behavior.
 
 ## 📁 Assignments Overview
 
 ### HW1: Roofline Model Analysis
-We analyzed memory and compute bottlenecks using the Roofline model via Intel Advisor. The assignment profiled 10 matrix/vector implementations to observe performance trends. Key deliverables included:
-- Roofline plots comparing different kernels
-- INTOPS/sec and arithmetic intensity tables
-- System configuration summary and ridge point classification
+- **Assignment PDF:** [HW1 Assignment](./roofline-model-analysis/roofline_assignment.pdf)
+- **Report:** [HW1 Report](./roofline-model-analysis/HuyNguyen_Roofline_Report.pdf)
+- Analysis of memory and compute bottlenecks across multiple matrix/vector kernels using Intel Advisor's Roofline model. The assignment involved:
+  - Profiling 10 distinct matrix/vector implementations with varying optimization levels
+  - Generating Roofline plots to visualize performance bottlenecks
+  - Measuring INTOPS/sec and arithmetic intensity across different implementations
+  - Identifying the ridge point where code transitions from memory-bound to compute-bound
 
-**Tools:** Intel Advisor, C++, Roofline plots
+**Tools:** Intel Advisor, C++, Roofline visualization
 
 ---
 
 ### HW2: Cache Design with CACTI
-This assignment explored the trade-offs between cache size, associativity, port count, and technology node using CACTI. We swept various parameters and reported:
-- Access time, area, energy, and data efficiency trends
-- Optimal configurations for L1 and LLC caches
+- **Assignment PDF:** [HW2 Assignment](./cache-design-cacti/CACTI_assignment.pdf)
+- **Report:** [HW2 Report](./cache-design-cacti/HuyNguyen_CACTI_Report.pdf)
+- Systematic exploration of cache design tradeoffs using CACTI cache simulator. Key aspects:
+  - Parameter sweeps across cache sizes (16KB to 8MB), associativity (1-way to 16-way)
+  - Analysis of access time, area, energy consumption, and data efficiency
+  - Examination of technology node impact (65nm vs. 32nm) on cache performance
+  - Determination of optimal configurations for both L1 and LLC caches
 
-**Tools:** CACTI, Linux shell
+**Tools:** CACTI 7.0, Bash scripting, data visualization
 
 ---
 
 ### HW3: DRAM Simulation with DRAMsim3
-We simulated memory access patterns (random, streaming, mixed) across different DRAM types: DDR4, LPDDR4, GDDR6, and HBM2. The analysis included:
-- Bandwidth, energy, and latency comparison
-- Command-level activity (`ACT`, `PRE`) trends
-- DRAM selection for power vs performance needs
+- **Assignment PDF:** [HW3 Assignment](./DRAM-simulation/DRAM_assignment.pdf)
+- **Report:** [HW3 Report](./DRAM-simulation/HuyNguyen_DRAM_Report.pdf)
+- Comprehensive simulation of various DRAM technologies under different memory access patterns:
+  - Comparison of DDR4, LPDDR4, GDDR6, and HBM2 under random, streaming, and mixed patterns
+  - Analysis of bandwidth scaling, energy consumption, and latency characteristics
+  - Detailed examination of command-level activity distribution (ACT, PRE, RD/WR)
+  - DRAM selection recommendations for power-constrained vs. performance-driven scenarios
 
-**Tools:** DRAMsim3, Python, JSON-to-CSV conversion
+**Tools:** DRAMsim3, Python for data processing, JSON-to-CSV conversion
 
 ---
 
 ### HW4: GPU Programming with CUDA
-This assignment focused on completing CUDA kernels for matrix addition, multiplication, and reduction. We:
-- Verified CPU vs GPU output correctness
-- Benchmarked GPU kernels with and without shared memory
-- Profiled kernel execution using `nvprof` and CUDA events
+- **Assignment PDF:** [HW4 Assignment](./cuda-programming/cuda_assignment.pdf)
+- **Report:** [HW4 Report](./cuda-programming/HuyNguyen_CUDA_Report.pdf)
+- Implementation and optimization of parallel algorithms using NVIDIA CUDA:
+  - Development of matrix addition, matrix multiplication, and parallel reduction kernels
+  - Implementation of shared memory optimizations and thread cooperative strategies
+  - Performance evaluation using CUDA events and nvprof profiling
+  - Comparative analysis between optimized GPU implementations and CPU baselines
 
-**Tools:** CUDA Toolkit, `nvcc`, `nvprof`, OpenMP
+**Tools:** NVIDIA CUDA Toolkit, nvcc compiler, nvprof, CUDA events timing
 
 ---
 
 ### HW5: PIM Programming with PIMeval-PIMbench
-We explored near-data processing using UVA’s PIMeval-PIMbench simulator. The assignment included:
-- Running GEMV across various HBM PIM configs (1–32 banks)
-- Implementing new benchmarks: RMS Norm and Layer Norm
-- Comparing total time and energy with CPU baselines
+- **Assignment PDF:** [HW5 Assignment](./pim-programming/assignment_PIMeval.pdf)
+- **Report:** [HW5 Report](./pim-programming/HuyNguyen_PIM_Report.pdf)
+- Exploration of near-data processing using UVA's PIMeval-PIMbench simulator:
+  - Implementation of RMS Norm and Layer Norm algorithms for the PIM architecture
+  - Performance analysis across varying HBM configurations (1-32 computing banks)
+  - Energy efficiency analysis of PIM vs. traditional CPU implementations
+  - Evaluation of parallelism scalability and resource utilization in PIM context
 
-**Tools:** PIMeval-PIMbench, C++, OpenMP, HBM DRAM configs
+**Tools:** PIMeval-PIMbench, C++ for kernel implementation, OpenMP, HBM modeling
 
 ---
 
-## 🧰 Technologies Used
-- Intel Advisor (Roofline Modeling)
-- CACTI (Cache Simulation)
-- DRAMsim3 (DRAM Trace Simulation)
-- NVIDIA CUDA Toolkit (GPU Kernel Programming)
-- PIMeval-PIMbench (Near-Memory Processing Simulator)
-- Python (Trace generation, data conversion, plotting)
+## 🧰 Technical Environment
+- **Intel Advisor:** Roofline modeling and performance characterization
+- **CACTI 7.0:** Cache architecture simulation and power/area analysis
+- **DRAMsim3:** DRAM timing and energy simulation
+- **NVIDIA CUDA Toolkit:** GPU kernel development and profiling
+- **PIMeval-PIMbench:** Near-memory processing simulation framework
+- **Supporting tools:** Python for data analysis, visualization libraries, shell scripting
 
-## 📌 Notes
+## 📌 Repository Structure
 Each assignment folder contains:
-- Source code or benchmark implementations
-- Configuration files and scripts
-- Analysis results (plots, CSVs, screenshots)
-- A short README with assignment-specific goals
+- Source code and implementations
+- Configuration files and execution scripts
+- Results and analysis visualizations
+- Detailed technical reports
 
 ---
 
 ## 🔍 License
-This repository is for academic and research use only. Please do not copy without permission.
+This repository is licensed under the [MIT License](LICENSE).
