@@ -1,6 +1,6 @@
 # CPU/GPU Memory & Near-Data Processing Assignments
 
-This repository contains my assignments from a hardware systems class focusing on CPU/GPU memory architecture, cache design, DRAM simulation, GPU programming, and near-data processing (PIM). Each assignment applies industry-standard tools to analyze, simulate, and optimize real-world memory and processing behavior.
+This repository contains my assignments from CS 6501 - CPU/GPU Memory & Near-Data Processing @ UVA Spring '25 under Prof. Kevin Skadron, focusing on CPU/GPU memory architecture, cache design, DRAM simulation, GPU programming, and near-data processing (PIM). Each assignment applies industry-standard tools to analyze, simulate, and optimize real-world memory and processing behavior.
 
 ## 📁 Assignments Overview
 
