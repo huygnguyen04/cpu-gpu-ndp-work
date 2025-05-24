@@ -5,7 +5,7 @@ This repository contains my assignments from CS 6501 - CPU/GPU Memory & Near-Dat
 ## 📁 Assignments Overview
 
 ### HW1: Roofline Model Analysis
-- **Assignment PDF:** [HW1 Assignment](./roofline-model-analysis/roofline_assignment.pdf)
+- **Assignment PDF:** [HW1 Assignment](./roofline-model-analysis/Roofline_Assignment.pdf)
 - **Report:** [HW1 Report](./roofline-model-analysis/HuyNguyen_Roofline_Report.pdf)
 - Analysis of memory and compute bottlenecks across multiple matrix/vector kernels using Intel Advisor's Roofline model. The assignment involved:
   - Profiling 10 distinct matrix/vector implementations with varying optimization levels
@@ -18,7 +18,7 @@ This repository contains my assignments from CS 6501 - CPU/GPU Memory & Near-Dat
 ---
 
 ### HW2: Cache Design with CACTI
-- **Assignment PDF:** [HW2 Assignment](./cache-design-cacti/CACTI_assignment.pdf)
+- **Assignment PDF:** [HW2 Assignment](./cache-design-cacti/CACTI_Assignment.pdf)
 - **Report:** [HW2 Report](./cache-design-cacti/HuyNguyen_CACTI_Report.pdf)
 - Systematic exploration of cache design tradeoffs using CACTI cache simulator. Key aspects:
   - Parameter sweeps across cache sizes (16KB to 8MB), associativity (1-way to 16-way)
@@ -31,7 +31,7 @@ This repository contains my assignments from CS 6501 - CPU/GPU Memory & Near-Dat
 ---
 
 ### HW3: DRAM Simulation with DRAMsim3
-- **Assignment PDF:** [HW3 Assignment](./DRAM-simulation/DRAM_assignment.pdf)
+- **Assignment PDF:** [HW3 Assignment](./DRAM-simulation/DRAM_Assignment.pdf)
 - **Report:** [HW3 Report](./DRAM-simulation/HuyNguyen_DRAM_Report.pdf)
 - Comprehensive simulation of various DRAM technologies under different memory access patterns:
   - Comparison of DDR4, LPDDR4, GDDR6, and HBM2 under random, streaming, and mixed patterns
